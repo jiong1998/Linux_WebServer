@@ -378,4 +378,7 @@ connfd都加上了EPOLLONESHOT，所以每次事件发生后，都需要重新�
 epoll一共注册了三种事件：
 - 连接listenfd
 - 数据到来connfd
-- 信号pipefd[0]
+- 信号pipefd[0] (统一事件源)
+- EPOLLOUT
+- 异常事件(EPOLLRDHUP、EPOLLHUP、EPOLLERR)
+
