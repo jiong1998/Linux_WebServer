@@ -1,6 +1,14 @@
 # Linux_WebServer
-在之前简易的webserver（https://github.com/jiong1998/simple_Webserver）基础上改进，并参考了游双的《Linux 高性能服务器编程》书上的代码，实现了Linux 下的高并发多线程 Web
-服务器，实现了一个简单的 HTTP 服务器。
+该项目并参考了游双的《Linux 高性能服务器编程》书上的代码，并在之前简易的webserver(https://github.com/jiong1998/simple_Webserver)进行了改进。改进的点有:
+- 半同步半异步的Proactor模式（半同步半异步就是线程池，proactor就是先在connfd读完数据到buf再把任务插入请求队列）
+- HTTP请求报文解析
+- 统一信号源（信号主要是计时器、） 
+- 计时器——处理非活动连接
+- 线程池
+- 数据库连接池
+- 注册登录
+
+实现了Linux 下的高并发多线程 Web服务器，实现了一个简单的 HTTP 服务器。
 
 以下是写这个项目的过程中所遇到的问题分析及总结：
 # 遇到的问题
