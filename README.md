@@ -346,7 +346,11 @@ struct iovec {
 
 
 
-
+## 12. 如何编译
+编译：
+```
+g++ -o main -g main.cpp timer.cpp http_conn.cpp sql_pool.cpp -I./ -I/usr/include/mysql/ -L/usr/lib64/mysql/ -lmysqlclient -pthread
+```
 
 
 
