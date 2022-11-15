@@ -1,5 +1,5 @@
 # Linux_WebServer
-该项目并参考了游双的《Linux 高性能服务器编程》书上的代码，并在之前简易的webserver(https://github.com/jiong1998/simple_Webserver)进行了改进。改进的点有:
+该项目并参考了游双的《Linux 高性能服务器编程》书上的代码，并在之前简易的webserver ( https://github.com/jiong1998/simple_Webserver ) 进行了改进。改进的点有:
 - 半同步半异步的Proactor模式（半同步半异步就是线程池，proactor就是先在connfd读完数据到buf再把任务插入请求队列）
 - HTTP请求报文解析
 - 统一信号源（信号主要是计时器、） 
